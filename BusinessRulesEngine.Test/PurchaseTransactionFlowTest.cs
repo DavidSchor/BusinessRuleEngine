@@ -21,5 +21,20 @@ namespace BusinessRulesEngine.Test
             packingServiceMock.Verify(ps => ps.GeneratePackingSlip(orderId, DepartmentConstants.Shipping));
             result.Success.Should().BeTrue();
         }
+
+        [Fact]
+        public void GIVEN_BookPurchaseOrder_WHEN_Purchase_THEN_PackingSlipSentToShippingAndRoyaltyToRoyalty()
+        {
+            var orderId = "SomeId";
+            var packingServiceMock = new Mock<IPackingService>();
+
+            var sut = new PhysicalItem(packingServiceMock.Object);
+
+            var result = sut.Purchase(orderId);
+
+            packingServiceMock.Verify(ps => ps.GeneratePackingSlip(orderId, DepartmentConstants.Shipping));
+            packingServiceMock.Verify(ps => ps.GeneratePackingSlip(orderId, DepartmentConstants.Royalty));
+            result.Success.Should().BeTrue();
+        }
     }
 }
