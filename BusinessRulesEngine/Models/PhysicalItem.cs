@@ -11,7 +11,7 @@ namespace BusinessRulesEngine.Models
             _packingService = packingService;
         }
 
-        public PurchaseResult Purchase(string orderId)
+        public virtual PurchaseResult Purchase(string orderId)
         {
             _packingService.GeneratePackingSlip(orderId, DepartmentConstants.Shipping);
             return new PurchaseResult { OrderId = orderId, Success = true };
