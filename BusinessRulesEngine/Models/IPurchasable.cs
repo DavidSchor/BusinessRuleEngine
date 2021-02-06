@@ -2,6 +2,6 @@
 {
     internal interface IPurchasable
     {
-        PurchaseResult Purchase();
+        PurchaseResult Purchase(string orderId);
     }
 }
