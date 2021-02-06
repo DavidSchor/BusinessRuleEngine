@@ -6,7 +6,7 @@ namespace BusinessRulesEngine.Models
     {
         private readonly IPackingService _packingService;
 
-        public Book(IPackingService packingService) : base(packingService)
+        public Book(IPackingService packingService, ICommissionService commissionService) : base(packingService, commissionService)
         {
             _packingService = packingService;
         }
