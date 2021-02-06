@@ -82,5 +82,20 @@ namespace BusinessRulesEngine.Test
             membershipServiceMock.Verify(ms => ms.ActivateMembership(orderId));
             result.Success.Should().BeTrue();
         }
+
+        [Fact]
+        public void GIVEN_NewMembershipOrder_WHEN_MembershipActivationNotSuccessfull_THEN_SuccessIsFalse()
+        {
+            var orderId = "SomeId";
+            var fixture = new Fixture().Customize(new AutoMoqCustomization());
+            var membershipServiceMock = fixture.Freeze<Mock<IMembershipService>>();
+            membershipServiceMock.Setup(ms => ms.ActivateMembership(orderId)).Returns(false);
+            var sut = fixture.Create<NewMembershipOrder>();
+
+            var result = sut.Purchase(orderId);
+
+            membershipServiceMock.Verify(ms => ms.ActivateMembership(orderId));
+            result.Success.Should().BeFalse();
+        }
     }
 }
