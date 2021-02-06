@@ -1,5 +1,4 @@
 ﻿using BusinessRulesEngine.Services;
-using System;
 
 namespace BusinessRulesEngine.Models
 {
@@ -14,7 +13,8 @@ namespace BusinessRulesEngine.Models
 
         public PurchaseResult Purchase(string orderId)
         {
-            throw new NotImplementedException();
+            _packingService.GeneratePackingSlip(orderId, DepartmentConstants.Shipping);
+            return new PurchaseResult { OrderId = orderId, Success = true };
         }
     }
 }

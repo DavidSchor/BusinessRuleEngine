@@ -18,7 +18,7 @@ namespace BusinessRulesEngine.Test
 
             var result = sut.Purchase(orderId);
 
-            packingServiceMock.Verify(ps => ps.GeneratePackingSlip(orderId, "shipping"));
+            packingServiceMock.Verify(ps => ps.GeneratePackingSlip(orderId, DepartmentConstants.Shipping));
             result.Success.Should().BeTrue();
         }
     }
