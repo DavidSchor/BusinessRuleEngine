@@ -53,5 +53,19 @@ namespace BusinessRulesEngine.Test
             commisionServiceMock.Verify(cs => cs.GrantCommission(orderId));
             result.Success.Should().BeTrue();
         }
+
+        [Fact]
+        public void GIVEN_BookPurchaseOrder_WHEN_Purchase_THEN_CommissionIsRegistered()
+        {
+            var orderId = "SomeId";
+            var fixture = new Fixture().Customize(new AutoMoqCustomization());
+            var commisionServiceMock = fixture.Freeze<Mock<ICommissionService>>();
+            var sut = fixture.Create<Book>();
+
+            var result = sut.Purchase(orderId);
+
+            commisionServiceMock.Verify(cs => cs.GrantCommission(orderId));
+            result.Success.Should().BeTrue();
+        }
     }
 }
