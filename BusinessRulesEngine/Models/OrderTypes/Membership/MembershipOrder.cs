@@ -2,7 +2,7 @@
 
 namespace BusinessRulesEngine.Models.OrderTypes
 {
-    public class MembershipOrder : IPurchasable
+    public abstract class MembershipOrder : IPurchasable
     {
         private readonly IMembershipService _membershipService;
 
@@ -11,7 +11,7 @@ namespace BusinessRulesEngine.Models.OrderTypes
             _membershipService = membershipService;
         }
 
-        public PurchaseResult Purchase(string orderId)
+        public virtual PurchaseResult Purchase(string orderId)
         {
             throw new System.NotImplementedException();
         }
