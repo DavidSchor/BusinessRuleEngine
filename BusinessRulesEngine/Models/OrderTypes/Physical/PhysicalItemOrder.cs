@@ -16,6 +16,7 @@ namespace BusinessRulesEngine.Models.OrderTypes
 
         public virtual PurchaseResult Purchase(string orderId)
         {
+            _packingService.AddBundledItems(orderId);
             _packingService.GeneratePackingSlip(orderId, DepartmentConstants.Shipping);
             _commissionService.GrantCommission(orderId);
             return new PurchaseResult { OrderId = orderId, Success = true };
