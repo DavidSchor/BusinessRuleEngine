@@ -16,7 +16,7 @@ namespace BusinessRulesEngine.Test
             var orderId = "SomeId";
             var fixture = new Fixture().Customize(new AutoMoqCustomization());
             var packingServiceMock = fixture.Freeze<Mock<IPackingService>>();
-            var sut = fixture.Create<PhysicalItem>();
+            var sut = fixture.Create<PhysicalItemOrder>();
 
             var result = sut.Purchase(orderId);
 
@@ -31,7 +31,7 @@ namespace BusinessRulesEngine.Test
             var fixture = new Fixture().Customize(new AutoMoqCustomization());
             var packingServiceMock = fixture.Freeze<Mock<IPackingService>>();
 
-            var sut = fixture.Create<Book>();
+            var sut = fixture.Create<BookOrder>();
 
             var result = sut.Purchase(orderId);
 
@@ -46,7 +46,7 @@ namespace BusinessRulesEngine.Test
             var orderId = "SomeId";
             var fixture = new Fixture().Customize(new AutoMoqCustomization());
             var commisionServiceMock = fixture.Freeze<Mock<ICommissionService>>();
-            var sut = fixture.Create<PhysicalItem>();
+            var sut = fixture.Create<PhysicalItemOrder>();
 
             var result = sut.Purchase(orderId);
 
@@ -60,7 +60,7 @@ namespace BusinessRulesEngine.Test
             var orderId = "SomeId";
             var fixture = new Fixture().Customize(new AutoMoqCustomization());
             var commisionServiceMock = fixture.Freeze<Mock<ICommissionService>>();
-            var sut = fixture.Create<Book>();
+            var sut = fixture.Create<BookOrder>();
 
             var result = sut.Purchase(orderId);
 

@@ -2,11 +2,11 @@
 
 namespace BusinessRulesEngine.Models.OrderTypes
 {
-    public class Book : PhysicalItem
+    public class BookOrder : PhysicalItemOrder
     {
         private readonly IPackingService _packingService;
 
-        public Book(IPackingService packingService, ICommissionService commissionService) : base(packingService, commissionService)
+        public BookOrder(IPackingService packingService, ICommissionService commissionService) : base(packingService, commissionService)
         {
             _packingService = packingService;
         }
