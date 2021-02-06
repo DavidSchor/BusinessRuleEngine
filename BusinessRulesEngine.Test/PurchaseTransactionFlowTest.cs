@@ -84,6 +84,20 @@ namespace BusinessRulesEngine.Test
         }
 
         [Fact]
+        public void GIVEN_PhysicalOrder_WHEN_OrderItemHasBundledProducts_THEN_PackingIsNotifiedToAddBundledItems()
+        {
+            var orderId = "SomeId";
+            var fixture = new Fixture().Customize(new AutoMoqCustomization());
+            var packingServiceMock = fixture.Freeze<Mock<IPackingService>>();
+            var sut = fixture.Create<PhysicalItemOrder>();
+
+            var result = sut.Purchase(orderId);
+
+            packingServiceMock.Verify(ps => ps.AddBundledItems(orderId));
+            result.Success.Should().BeTrue();
+        }
+
+        [Fact]
         public void GIVEN_NewMembershipOrder_WHEN_MembershipActivationNotSuccessfull_THEN_SuccessIsFalse()
         {
             var orderId = "SomeId";
