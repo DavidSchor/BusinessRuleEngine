@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessRulesEngine", "BusinessRulesEngine\BusinessRulesEngine.csproj", "{1BED5007-B77A-4D03-8BC4-994C458275F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessRulesEngine.Test", "BusinessRulesEngine.Test\BusinessRulesEngine.Test.csproj", "{2938379F-9F15-4484-9417-3705B5B12550}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1BED5007-B77A-4D03-8BC4-994C458275F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BED5007-B77A-4D03-8BC4-994C458275F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BED5007-B77A-4D03-8BC4-994C458275F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2938379F-9F15-4484-9417-3705B5B12550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2938379F-9F15-4484-9417-3705B5B12550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2938379F-9F15-4484-9417-3705B5B12550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2938379F-9F15-4484-9417-3705B5B12550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
