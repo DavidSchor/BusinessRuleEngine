@@ -28,7 +28,7 @@ namespace BusinessRulesEngine.Test
             var orderId = "SomeId";
             var packingServiceMock = new Mock<IPackingService>();
 
-            var sut = new PhysicalItem(packingServiceMock.Object);
+            var sut = new Book(packingServiceMock.Object);
 
             var result = sut.Purchase(orderId);
 
