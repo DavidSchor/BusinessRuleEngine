@@ -1,6 +1,6 @@
 ﻿using BusinessRulesEngine.Services;
 
-namespace BusinessRulesEngine.Models
+namespace BusinessRulesEngine.Models.OrderTypes
 {
     public class Book : PhysicalItem
     {

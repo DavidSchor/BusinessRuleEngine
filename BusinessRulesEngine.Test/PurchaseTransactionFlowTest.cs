@@ -1,6 +1,6 @@
 using AutoFixture;
 using AutoFixture.AutoMoq;
-using BusinessRulesEngine.Models;
+using BusinessRulesEngine.Models.OrderTypes;
 using BusinessRulesEngine.Services;
 using FluentAssertions;
 using Moq;
