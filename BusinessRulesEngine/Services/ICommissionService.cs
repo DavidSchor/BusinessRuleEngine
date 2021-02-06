@@ -2,6 +2,6 @@
 {
     public interface ICommissionService
     {
-        void GrantCommission(string orderId);
+        bool GrantCommission(string orderId);
     }
 }

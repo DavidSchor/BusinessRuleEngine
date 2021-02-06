@@ -2,6 +2,6 @@
 {
     public interface IPackingService
     {
-        void GeneratePackingSlip(string orderId, string destination);
+        bool GeneratePackingSlip(string orderId, string destination);
     }
 }

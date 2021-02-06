@@ -13,7 +13,7 @@ namespace BusinessRulesEngine.Models.OrderTypes
 
         public virtual PurchaseResult Purchase(string orderId)
         {
-            throw new System.NotImplementedException();
+            return new PurchaseResult { OrderId = orderId, Success = true };
         }
     }
 }

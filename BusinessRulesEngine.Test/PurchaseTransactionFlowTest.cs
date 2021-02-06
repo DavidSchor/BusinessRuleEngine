@@ -74,6 +74,7 @@ namespace BusinessRulesEngine.Test
             var orderId = "SomeId";
             var fixture = new Fixture().Customize(new AutoMoqCustomization());
             var membershipServiceMock = fixture.Freeze<Mock<IMembershipService>>();
+            membershipServiceMock.Setup(ms => ms.ActivateMembership(orderId)).Returns(true);
             var sut = fixture.Create<NewMembershipOrder>();
 
             var result = sut.Purchase(orderId);

@@ -2,8 +2,8 @@
 {
     public interface IMembershipService
     {
-        void ActivateMembership(string orderId);
+        bool ActivateMembership(string orderId);
 
-        void UpgradeMembership(string orderId);
+        bool UpgradeMembership(string orderId);
     }
 }
